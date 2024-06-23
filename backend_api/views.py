@@ -58,3 +58,5 @@ class PredictView(APIView):
             prediction = self.model.predict(scaled_input)
             return Response({'prediction': prediction.tolist()}, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    
